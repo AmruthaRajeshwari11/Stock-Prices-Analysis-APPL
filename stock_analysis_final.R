@@ -51,7 +51,7 @@ qqnorm(resid(model1))
 qqline(resid(linear_reg))
 
 #########################TASK2####################################
-##1)building a arima time series model for predicting and testing on test dataset
+##1)building a arima time series model with twitter indicators as external regressors for predicting and testing on test dataset
 Time_compare=stock_AAPL[,c("Date","Adj. Close")]
 news_feed_1=news_feed[,-c(3,4)]
 
@@ -72,8 +72,7 @@ View(y_test_1)
 
 
 ##################################Task3############################
-##building a model to predict stock prices using auto arima with market indicators and twitter
-##indicators as external regressors
+##building a model to predict stock prices using auto arima with market indicators and twitter indicators as external regressors
 
 Time_compare=stock_AAPL[,c("Date","Adj. Close")]
 #merging stock_AAPL with economic_idicators to bring them to one time scale
